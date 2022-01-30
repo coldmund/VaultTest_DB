@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
 
-    db:
+    testdb:
       image: mariadb
       container_name: testdb
       restart: always
@@ -14,4 +14,18 @@ services:
         MARIADB_USER: user
         MARIADB_PASSWORD: qwer12#$$
       volumes:
-        - ./initdata:/docker-entrypoint-initdb.d
+        - ./initdata1:/docker-entrypoint-initdb.d
+
+    vaultdb:
+      image: mariadb
+      container_name: vaultdb
+      restart: always
+      ports:
+        - '3307:3306'
+      environment:
+        MARIADB_ROOT_PASSWORD: qwer12#$$
+        MARIADB_DATADABSE: vaultdb
+        MARIADB_USER: user
+        MARIADB_PASSWORD: qwer12#$$
+      volumes:
+        - ./initdata2:/docker-entrypoint-initdb.d
