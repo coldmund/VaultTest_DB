@@ -15,6 +15,7 @@ services:
         MARIADB_PASSWORD: qwer12#$$
       volumes:
         - ./initdata1:/docker-entrypoint-initdb.d
+        - ./testdb:/var/lib/mysql
 
     vaultdb:
       image: mariadb
@@ -29,3 +30,4 @@ services:
         MARIADB_PASSWORD: qwer12#$$
       volumes:
         - ./initdata2:/docker-entrypoint-initdb.d
+        - ./vaultdb:/var/lib/mysql
