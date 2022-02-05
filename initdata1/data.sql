@@ -3,8 +3,8 @@ CREATE DATABASE IF NOT EXISTS testdb;
 USE testdb;
 CREATE TABLE `TestTable` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `key` varchar(100) NOT NULL,
-  `value` text NOT NULL,
+  `cle` varchar(100) NOT NULL,
+  `prix` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
