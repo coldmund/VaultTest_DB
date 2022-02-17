@@ -9,7 +9,7 @@
 	```mysql
 	create role vaultrole;
 	```
-2. assign testdb and myslq db privileges to the role
+2. assign testdb privileges and grant option to the role
 	```mysql
 	grant all privileges on testdb.* to vaultrole with grant option;
 	```
