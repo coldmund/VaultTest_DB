@@ -12,7 +12,6 @@
 2. assign testdb and myslq db privileges to the role
 	```mysql
 	grant all privileges on testdb.* to vaultrole with grant option;
-	grant all privileges on mysql.* to vaultrole with grant option;
 	```
 3. create user
 	```mysql
