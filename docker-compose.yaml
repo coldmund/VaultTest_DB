@@ -31,3 +31,18 @@ services:
       volumes:
         - ./initdata2:/docker-entrypoint-initdb.d
         - ./vaultdb:/var/lib/mysql
+
+    testdb2:
+      image: mariadb
+      container_name: testdb2
+      restart: always
+      ports:
+        - '13308:3306'
+      environment:
+        MARIADB_ROOT_PASSWORD: qwer12#$$
+        MARIADB_DATADABSE: testdb
+        MARIADB_USER: user
+        MARIADB_PASSWORD: qwer12#$$
+      volumes:
+        - ./initdata3:/docker-entrypoint-initdb.d
+        - ./testdb2:/var/lib/mysql
